@@ -1,0 +1,193 @@
+@import "variables";
+@import "config";
+@import "mixin";
+.title {
+  background-image: url(/images/bg-pattern.svg);
+  background-repeat: no-repeat;
+  z-index: 3;
+  height: 50vh;
+  width: 100vw;
+  object-fit: cover;
+  background-size: cover;
+  text-align: center;
+  padding-top: 4.5em;
+  position: relative;
+  &-svg {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  &-top {
+    color: $DarkDesaturatedBlueTextCTABackground;
+  }
+  &-bottom {
+    color: $GrayishBlueText;
+    font-weight: map-get($fontWeights, normal);
+  }
+}
+
+.sections {
+  width: 50vw;
+  padding: 3em 2em 1.5em;
+  background-color: white;
+  border-radius: 1em;
+  z-index: 5;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  @include mobile-view {
+    padding-top: 2em;
+    top: 65%;
+    width: 80vw;
+  }
+  & .section-one {
+    & .views-cost {
+      display: flex;
+      justify-content: space-between;
+      @include mobile-view {
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+      }
+      & .page-view {
+        color: $GrayishBlueText;
+        @include mobile-view {
+          margin-bottom: 1.5em;
+        }
+      }
+      & .cost {
+        color: $DarkDesaturatedBlueTextCTABackground;
+        font-weight: map-get($fontWeights, bold);
+        font-size: 2rem;
+        & span {
+          color: $GrayishBlueText;
+          font-size: 0.5em;
+          vertical-align: middle;
+        }
+      }
+    }
+    & .progress-bar {
+      background-color: $PaleBlue;
+      width: 100%;
+      border-radius: 5px;
+      height: 0.5rem;
+      margin: 2em 0;
+      position: relative;
+      &-fill {
+        display: block;
+        background-color: $StrongCyanSliderBackround;
+        border-radius: 5px;
+        width: 55%;
+        height: 0.5rem;
+      }
+      &-svg {
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        background-color: darkcyan;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 9px 0 0 4.5px;
+        position: absolute;
+        top: -110%;
+        left: 50%;
+        & g {
+          position: absolute;
+        }
+      }
+    }
+    & .billing {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      color: $GrayishBlueText;
+      border-bottom: 1px solid lightgray;
+      padding-bottom: 2em;
+      padding-left: 7em;
+      @include mobile-view {
+        padding: 0;
+        font-size: 0.5em;
+      }
+
+      &-button {
+        width: 2.7rem;
+        height: 1.3rem;
+        background: $GrayishBlueToggleBackground;
+        border: none;
+        border-radius: 1em;
+        position: relative;
+        &:hover {
+          cursor: pointer;
+        }
+        @include mobile-view {
+          width: 2.5rem;
+        }
+        & .switch {
+          display: block;
+          position: absolute;
+          top: 2px;
+          left: 3px;
+          width: 1rem;
+          height: 1rem;
+          border-radius: 50%;
+          background-color: white;
+          transition: all 0.5s ease-in;
+        }
+      }
+      &-discount {
+        background: $LightGrayishRedDiscountBackground;
+        color: $LightRedText;
+        padding: 2px 7px;
+        border-radius: 1em;
+      }
+    }
+  }
+  & .section-two {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1em 0 0 0;
+    color: $GrayishBlueText;
+    @include mobile-view {
+      flex-direction: column;
+    }
+    & .info {
+      @include mobile-view {
+        margin: 1em 0;
+      }
+    }
+    & .button .button-start {
+      width: 10rem;
+      height: 2rem;
+      background-color: $DarkDesaturatedBlueTextCTABackground;
+      color: $GrayishBlueText;
+      border-radius: 1em;
+      border: none;
+      &:hover {
+        cursor: pointer;
+        color: white;
+      }
+    }
+  }
+}
+
+.attribution {
+  position: fixed;
+  bottom: 1em;
+  left: 35%;
+}
+
+.show .billing .billing-button {
+  background-color: $StrongCyanSliderBackround;
+  & .switch {
+    left: 1.5em;
+    transition: all 0.5s ease-in;
+    @include mobile-view {
+      left: 2.5em;
+    }
+  }
+}

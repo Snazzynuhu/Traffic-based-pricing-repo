@@ -1,0 +1,275 @@
+*, body, html {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #eeeefb;
+}
+
+.title {
+  background-image: url(/images/bg-pattern.svg);
+  background-repeat: no-repeat;
+  z-index: 3;
+  height: 50vh;
+  width: 100vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-size: cover;
+  text-align: center;
+  padding-top: 4.5em;
+  position: relative;
+}
+
+.title-svg {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.title-top {
+  color: #293356;
+}
+
+.title-bottom {
+  color: #858fad;
+  font-weight: 400;
+}
+
+.sections {
+  width: 50vw;
+  padding: 3em 2em 1.5em;
+  background-color: white;
+  border-radius: 1em;
+  z-index: 5;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+@media (max-width: 50rem) {
+  .sections {
+    padding-top: 2em;
+    top: 65%;
+    width: 80vw;
+  }
+}
+
+.sections .section-one .views-cost {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (max-width: 50rem) {
+  .sections .section-one .views-cost {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative;
+  }
+}
+
+.sections .section-one .views-cost .page-view {
+  color: #858fad;
+}
+
+@media (max-width: 50rem) {
+  .sections .section-one .views-cost .page-view {
+    margin-bottom: 1.5em;
+  }
+}
+
+.sections .section-one .views-cost .cost {
+  color: #293356;
+  font-weight: 800;
+  font-size: 2rem;
+}
+
+.sections .section-one .views-cost .cost span {
+  color: #858fad;
+  font-size: 0.5em;
+  vertical-align: middle;
+}
+
+.sections .section-one .progress-bar {
+  background-color: rgba(223, 246, 251, 0.657);
+  width: 100%;
+  border-radius: 5px;
+  height: 0.5rem;
+  margin: 2em 0;
+  position: relative;
+}
+
+.sections .section-one .progress-bar-fill {
+  display: block;
+  background-color: #10d5c2;
+  border-radius: 5px;
+  width: 55%;
+  height: 0.5rem;
+}
+
+.sections .section-one .progress-bar-svg {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: darkcyan;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 9px 0 0 4.5px;
+  position: absolute;
+  top: -110%;
+  left: 50%;
+}
+
+.sections .section-one .progress-bar-svg g {
+  position: absolute;
+}
+
+.sections .section-one .billing {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  color: #858fad;
+  border-bottom: 1px solid lightgray;
+  padding-bottom: 2em;
+  padding-left: 7em;
+}
+
+@media (max-width: 50rem) {
+  .sections .section-one .billing {
+    padding: 0;
+    font-size: 0.5em;
+  }
+}
+
+.sections .section-one .billing-button {
+  width: 2.7rem;
+  height: 1.3rem;
+  background: #cdd7ee;
+  border: none;
+  border-radius: 1em;
+  position: relative;
+}
+
+.sections .section-one .billing-button:hover {
+  cursor: pointer;
+}
+
+@media (max-width: 50rem) {
+  .sections .section-one .billing-button {
+    width: 2.5rem;
+  }
+}
+
+.sections .section-one .billing-button .switch {
+  display: block;
+  position: absolute;
+  top: 2px;
+  left: 3px;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: white;
+  -webkit-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
+}
+
+.sections .section-one .billing-discount {
+  background: #feece7;
+  color: #ff8c66;
+  padding: 2px 7px;
+  border-radius: 1em;
+}
+
+.sections .section-two {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1em 0 0 0;
+  color: #858fad;
+}
+
+@media (max-width: 50rem) {
+  .sections .section-two {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media (max-width: 50rem) {
+  .sections .section-two .info {
+    margin: 1em 0;
+  }
+}
+
+.sections .section-two .button .button-start {
+  width: 10rem;
+  height: 2rem;
+  background-color: #293356;
+  color: #858fad;
+  border-radius: 1em;
+  border: none;
+}
+
+.sections .section-two .button .button-start:hover {
+  cursor: pointer;
+  color: white;
+}
+
+.attribution {
+  position: fixed;
+  bottom: 1em;
+  left: 35%;
+}
+
+.show .billing .billing-button {
+  background-color: #10d5c2;
+}
+
+.show .billing .billing-button .switch {
+  left: 1.5em;
+  -webkit-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
+}
+
+@media (max-width: 50rem) {
+  .show .billing .billing-button .switch {
+    left: 2.5em;
+  }
+}
+/*# sourceMappingURL=main.css.map */
